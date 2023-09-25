@@ -33,5 +33,3 @@ if start_confirm == "y":
 
 else:
     print("Aborted")
-
-
