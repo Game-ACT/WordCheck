@@ -1,7 +1,7 @@
 # WordCheck
 # By Noigamegun
 # Version Nightly
-# words.txt is required in the path
+# words.txt is required
 
 start_confirm = str(input("Loading the words maybe freeze your PC temporary. Continue? [y,n] : ")).strip().lower()
 if start_confirm == "y":
