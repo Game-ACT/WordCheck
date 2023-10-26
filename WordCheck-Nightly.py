@@ -5,17 +5,23 @@
 
 start_confirm = str(input("Loading the words maybe freeze your PC temporary. Continue? [y,n] : ")).strip().lower()
 if start_confirm == "y":
-    print("\n")
-    print("Loading words list...")
-    file_path = "words.txt"
-    word_list = []
+    while True:
+        try:
+            file_path = str(input("Enter file name (*txt)"))
+            print("\n")
+            print("Loading words list...")
+            word_list = []
 
-    with open(file_path, "r") as file:
-        for line in file:
-            word_list.append(line.strip())
+            with open(file_path, "r") as file:
+                for line in file:
+                    word_list.append(line.strip())
 
-    print("\n")
-    print("Loading Done.")
+            print("\n")
+            print("Loading Done.")
+        except:
+            print()
+            print("File not found. Try again.")
+            print()
 
     while True:
         print("\n")
