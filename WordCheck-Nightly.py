@@ -7,7 +7,7 @@ start_confirm = str(input("Loading the words maybe freeze your PC temporary. Con
 if start_confirm == "y":
     while True:
         try:
-            file_path = str(input("Enter file name (*txt)"))
+            file_path = str(input("Enter file name (Must be a txt file.  Not Case-sensitive. The program will remove and starting and ending spaces.)"))
             print("\n")
             print("Loading words list...")
             word_list = []
