@@ -18,6 +18,7 @@ if start_confirm == "y":
 
             print("\n")
             print("Loading Done.")
+            break
         except:
             print()
             print("File not found. Try again.")
