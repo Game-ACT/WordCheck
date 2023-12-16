@@ -7,7 +7,23 @@ start_confirm = str(input("Loading the words maybe freeze your PC temporary. Con
 if start_confirm == "y":
     while True:
         try:
-            file_path = str(input("Enter file name (Must be a txt file.  Case-sensitive. The program will adjust the list to be compatible. : )"))
+            while True:
+                print()
+                # Just add the names here
+                print("[1] words.txt")
+                print("[0] Enter Manually")
+                user_input = int(input("Select From List Above : "))
+                print()
+                # Just add the files here
+                if user_input == 1:
+                    file_path = "words.txt"
+                    break
+                elif user_input == 0:
+                    file_path = str(input("Enter The Word List Name : "))
+                    break
+                else:
+                    print("Invalid. Try Again.")
+
             print("\n")
             print("Loading words list...")
             word_list = []
@@ -26,8 +42,8 @@ if start_confirm == "y":
 
     while True:
         print("\n")
-        word_to_check = input("Enter a word (Enter \"stop the program\" to stop): ").strip().lower()
-        if word_to_check == "stop the program":
+        word_to_check = input("Enter a word (Enter \"WORDKILL\" to stop): ").strip().lower()
+        if word_to_check == "wordkill":
             print("\n")
             print("Stopped")
             break
